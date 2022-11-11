@@ -9,7 +9,7 @@ if [ -f "$1" ]; then
 	mv $1 $reName
 	for file in $filenames
 	do
-		index=$(echo $file | sed 's@^[^0-9]*\([0-9]\+\).*@\1@')
+		index=$(echo $file | sed -e 's/\(^[0-9:\.]*\).*/\1/')
 		re='^[0-9]+$'
 		if [[ $index =~ $re && $file != "./$1" ]] ; then
 			#check if much lower than first item, if so, no need to increment

@@ -5,3 +5,5 @@ do
 	touch $i" - test with many lines()and 'Symbols\' file$i.mp3"
 done
 touch fileB.mp3
+touch fileC.mp3
+touch fileD.mp3
